@@ -15,6 +15,10 @@ const port = 5000 // react by default 3000 diye start kore tai server er port nu
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/',(req, res)=>{
+  res.send("Hello, Heroku Working............");
+})
+
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
